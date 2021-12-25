@@ -19,7 +19,7 @@ class Box {
         this.angVelocity = 0;
         this.mass = (w + h)*2;
         this.inertia = w * h * w;
-        this.coefficient = 0.0015;
+        this.coefficient = 0.0005;
     }
 
     /** Rotates Box by angle
