@@ -17,9 +17,9 @@ class Box {
         this.location = lb2d.createVector(posx + w / 2, posy + h / 2);
         this.velocity = lb2d.createVector(0, 0);
         this.angVelocity = 0;
-        this.mass = (w + h)*2;
+        this.mass = w + h;
         this.inertia = w * h * w;
-        this.coefficient = 0.0015;
+        this.coefficient = 0.001;
     }
 
     /** Rotates Box by angle
@@ -92,11 +92,11 @@ class Ball {
         this.velocity = lb2d.createVector(0, 0);
         this.angVelocity = 0;
         this.radius = radius;
-        this.mass = radius * 2;
+        this.mass = radius;
         this.inertia = radius * radius * radius/2;
         this.orientation = lb2d.createVector(radius, 0);
         this.orientation.add(this.location);
-        this.coefficient = 0.0015;
+        this.coefficient = 0.001;
     }
     
     display() {
